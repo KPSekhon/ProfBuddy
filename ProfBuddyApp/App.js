@@ -4,6 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import StudentDetails from './StudentDetails';
 import LoadingScreen from './LoadingScreen';
+import StudentLogin from './StudentLogin';
 import React from 'react';
 
 const Stack = createStackNavigator();
