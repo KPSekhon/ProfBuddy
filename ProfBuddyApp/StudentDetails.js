@@ -1,6 +1,6 @@
+// StudentDetails.js
 import React, { useState } from 'react';
-import { View, Text, TextInput, Image, TouchableOpacity, StyleSheet } from 'react-native';
-import { Avatar, Card, Title, Paragraph, Button } from 'react-native-paper';
+import { ScrollView, View, Text, TextInput, Image, TouchableOpacity, StyleSheet } from 'react-native';
 
 const StudentDetails = ({ navigation }) => {
   const [name, setName] = useState('');
@@ -21,74 +21,138 @@ const StudentDetails = ({ navigation }) => {
   };
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Name:</Text>
-      <TextInput
-        style={styles.input}
-        value={name}
-        onChangeText={(text) => setName(text)}
-      />
+    <ScrollView style={styles.container}>
+      <View style={styles.header}>
+        <Text style={styles.title}>Paul</Text>
+      </View>
 
-    <Avatar.Image
-        size={150}
-        source={{ uri: 'https://cdna.artstation.com/p/assets/images/images/040/951/926/large/maddie_creates-jj-ver2.jpg?1630351796' }}
-        style={styles.avatar}
-      />
+      <View style={styles.imageContainer}>
+        {/* Placeholder for an image - replace the source with your actual image */}
+        <Image
+          source={{ uri: 'https://cdn.discordapp.com/attachments/1175508031694454804/1175928662994989086/ethan-rougon-uZBCgRDKsko-unsplash.jpg?ex=656d03e8&is=655a8ee8&hm=64a325c07dff083ae01e5e08dd4c6c81e7eef9b2dc4e6cda3986bfe408fe4db2&' }}
+          style={styles.image}
+        />
+        <TouchableOpacity style={styles.editButton}>
+          <Text>Edit</Text>
+        </TouchableOpacity>
+      </View>
 
-        
-      <Text style={styles.title}>Major:</Text>
-      <TextInput
-        style={styles.input}
-        value={major}
-        onChangeText={(text) => setMajor(text)}
-      />
+      <View style={styles.formContainer}>
+        <Text style={styles.label}>Enter your year</Text>
+        <View style={styles.inputContainer}>
+          <TextInput
+            style={styles.input}
+            value={name}
+            onChangeText={(text) => setName(text)}
+          />
+        </View>
 
-      <Text style={styles.title}>Hobbies and Interests:</Text>
-      <TextInput
-        style={styles.input}
-        value={hobbies}
-        onChangeText={(text) => setHobbies(text)}
-      />
+        <Text style={styles.label}>Enter your major</Text>
+        <View style={styles.inputContainer}>
+          <TextInput
+            style={styles.input}
+            value={major}
+            onChangeText={(text) => setMajor(text)}
+          />
+        </View>
 
-      <Text style={styles.title}>Field of Study:</Text>
-      <TextInput
-        style={styles.input}
-        value={fieldOfStudy}
-        onChangeText={(text) => setFieldOfStudy(text)}
-      />
+        <Text style={styles.label}>Enter a field of interest (optional)</Text>
+        <View style={styles.inputContainer}>
+          <TextInput
+            style={styles.input}
+            value={fieldOfStudy}
+            onChangeText={(text) => setFieldOfStudy(text)}
+          />
+        </View>
 
-      <TouchableOpacity style={styles.button} onPress={handleSubmit}>
-        <Text style={styles.buttonText}>Next</Text>
-      </TouchableOpacity>
-    </View>
+        <Text style={styles.label}>Write about yourself here! This helps professors get to know you.</Text>
+        <View style={styles.textAreaContainer}>
+          <TextInput
+            style={styles.textArea}
+            value={hobbies}
+            onChangeText={(text) => setHobbies(text)}
+            multiline
+          />
+        </View>
+
+        <TouchableOpacity style={styles.nextButton} onPress={handleSubmit}>
+          <Text style={styles.nextButtonText}>Next</Text>
+        </TouchableOpacity>
+      </View>
+    </ScrollView>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 16,
+    backgroundColor: '#F7FAFC',
+    padding: 20,
+  },
+  header: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 24,
   },
   title: {
-    fontSize: 18,
+    fontSize: 24,
     fontWeight: 'bold',
-    marginTop: 10,
+  },
+  imageContainer: {
+    alignItems: 'center',
+    marginTop: 7,
+    marginBottom: 20,
+  },
+  image: {
+    width: 170,
+    height: 170,
+    borderRadius: 85,
+    marginBottom: 10,
+  },
+  editButton: {
+    backgroundColor: '#EDF2F7',
+    padding: 10,
+    borderRadius: 5,
+    alignItems: 'center',
+  },
+  formContainer: {
+    backgroundColor: '#F7FAFC',
+    borderRadius: 35,
+    padding: 20,
+  },
+  label: {
+    fontWeight: 'bold',
+    marginBottom: 5,
+    color: '#141B61',
+    fontSize: 14,
+  },
+  inputContainer: {
+    backgroundColor: '#EDF2F7',
+    marginBottom: 15,
+    borderRadius: 5,
   },
   input: {
     height: 40,
-    borderColor: 'gray',
-    borderWidth: 1,
-    marginBottom: 10,
     paddingHorizontal: 10,
   },
-  button: {
-    backgroundColor: 'blue',
+  textAreaContainer: {
+    backgroundColor: '#EDF2F7',
+    marginBottom: 15,
+    borderRadius: 5,
+  },
+  textArea: {
+    height: 133,
+    paddingHorizontal: 10,
+    paddingTop: 10,
+  },
+  nextButton: {
+    backgroundColor: '#141B61',
     padding: 10,
     borderRadius: 5,
     alignItems: 'center',
     marginTop: 20,
   },
-  buttonText: {
+  nextButtonText: {
     color: 'white',
     fontWeight: 'bold',
   },

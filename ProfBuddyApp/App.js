@@ -5,6 +5,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import StudentDetails from './StudentDetails';
 import LoadingScreen from './LoadingScreen';
 import StudentLogin from './StudentLogin';
+import ProfLogin from './ProfLogin';
 import React from 'react';
 
 const Stack = createStackNavigator();
@@ -18,7 +19,8 @@ const App = () => {
   // );
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="StudentLogin">
+      <Stack.Navigator initialRouteName="ProfLogin">
+        <Stack.Screen name="ProfLogin" component={ProfLogin}/>
       <Stack.Screen name= "StudentLogin" component={StudentLogin}/>
         <Stack.Screen name="StudentDetails" component={StudentDetails} />
         <Stack.Screen name="LoadingScreen" component={LoadingScreen} />
