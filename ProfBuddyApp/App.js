@@ -3,6 +3,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import StudentDetails from './StudentDetails';
+import LoadingScreen from './LoadingScreen';
 import React from 'react';
 
 const Stack = createStackNavigator();
@@ -16,8 +17,10 @@ const App = () => {
   // );
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator initialRouteName="StudentDetails">
         <Stack.Screen name="StudentDetails" component={StudentDetails} />
+        <Stack.Screen name="LoadingScreen" component={LoadingScreen} />
+        {/* Add other screens/routes here */}
       </Stack.Navigator>
     </NavigationContainer>
   );
