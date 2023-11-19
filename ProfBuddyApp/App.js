@@ -3,6 +3,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import StudentDetails from './StudentDetails';
+import StudentLogin from './StudentLogin';
 import React from 'react';
 
 const Stack = createStackNavigator();
@@ -17,7 +18,7 @@ const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="StudentDetails" component={StudentDetails} />
+        <Stack.Screen name="StudentLogin" component={StudentLogin} />
       </Stack.Navigator>
     </NavigationContainer>
   );
