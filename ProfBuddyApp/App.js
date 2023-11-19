@@ -18,9 +18,11 @@ const App = () => {
   // );
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="StudentDetails">
+      <Stack.Navigator initialRouteName="StudentLogin">
+      <Stack.Screen name= "StudentLogin" component={StudentLogin}/>
         <Stack.Screen name="StudentDetails" component={StudentDetails} />
         <Stack.Screen name="LoadingScreen" component={LoadingScreen} />
+
         {/* Add other screens/routes here */}
       </Stack.Navigator>
     </NavigationContainer>

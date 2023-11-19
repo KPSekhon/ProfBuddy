@@ -37,7 +37,6 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 20,
-    fontFamily: 'Poppins',
   },
   loader: {
     marginBottom: 20,
@@ -45,7 +44,6 @@ const styles = StyleSheet.create({
   message: {
     fontSize: 16,
     textAlign: 'center',
-    fontFamily: 'Poppins',
   },
 });
 
