@@ -23,24 +23,24 @@ const StudentLogin = ({ navigation }) => {
           <Text style={styles.Title}>Student</Text>
           <Avatar.Image
             size={150}
-            source={{ uri: 'https://cdna.artstation.com/p/assets/images/images/040/951/926/large/maddie_creates-jj-ver2.jpg?1630351796' }}
+            source={{ uri: 'https://media.discordapp.net/attachments/1175508031694454804/1175928434317344768/vecteezy_wheelchair-sits-at-a-computer-freelance-deisgner-programmer_13068957.jpg?ex=656d03b2&is=655a8eb2&hm=bcdba00da50562ea9532d61173728ac03526ff90cf76ad3d3685a0b0c5bf38e4&=&width=1410&height=940' }}
             style={styles.avatar}
           />
 
-          <Text style={styles.label}>Enter CWL</Text>
+          
           <TextInput
             style={styles.input}
             value={cwl}
             onChangeText={(text) => setCwl(text)}
-            placeholder="CWL"
+            placeholder="Enter CWL"
           />
 
-          <Text style={styles.label}>Enter Password</Text>
+          
           <TextInput
             style={styles.input}
             value={password}
             onChangeText={(text) => setPassword(text)}
-            placeholder="Password"
+            placeholder="Enter Password"
             secureTextEntry
           />
 
@@ -63,29 +63,33 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
     padding: 0,
+    backgroundColor: 'white'
   },
   avatar: {
     alignSelf: 'center',
-    marginTop: 20,
-    marginBottom: 20,
+    marginTop: 24,
+    marginBottom: 65,
   },
   input: {
-    height: 40,
-    borderColor: 'gray',
-    borderWidth: 1,
+    height: 45,
+    backgroundColor: '#EBEBEB',
     marginBottom: 20,
     paddingHorizontal: 10,
+    borderRadius: 5,
   },
   label: {
     fontWeight: 'bold',
     marginBottom: 5,
+    
   },
   Title: {
+    textAlign: 'center',
+    marginTop: 100,
     fontWeight: 'bold',
     marginBottom: 5,
     color: '#141B61',
-    fontSize: 24,
-    lineHeight: 30,
+    fontSize: 32,
+
   },
   button: {
     backgroundColor: '#141B61',
@@ -94,8 +98,15 @@ const styles = StyleSheet.create({
     borderRadius: 5,
   },
   buttonText: {
-    color: 'white',
-    fontWeight: 'bold',
+    color: "#FAFAFA",
+    whiteSpace: "nowrap",
+    borderRadius: 10,
+    backgroundColor: "#141B61",
+    alignItems: "center",
+    padding: "13px 20px",
+    fontSize: 16,
+    lineHeight: 24,
+
   },
 });
 

@@ -19,7 +19,7 @@ const App = () => {
   // );
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="ProfLogin">
+      <Stack.Navigator initialRouteName="StudentLogin">
         <Stack.Screen name="ProfLogin" component={ProfLogin}/>
       <Stack.Screen name= "StudentLogin" component={StudentLogin}/>
         <Stack.Screen name="StudentDetails" component={StudentDetails} />
