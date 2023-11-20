@@ -17,6 +17,7 @@ import SelectionPage from './SelectionPage';
 import ConnectedPage from './ConnectedPage';
 import ProfilePage from './ProfilePage';
 
+
 const Stack = createStackNavigator();
 
 const App = () => {
@@ -32,6 +33,7 @@ const App = () => {
         <Stack.Screen name="NoticeProf" component={NoticeProf}/>
         <Stack.Screen name="NoticeStudent" component={NoticeStudent}/>
         <Stack.Screen name="ProfLogin" component={ProfLogin}/>
+        <Stack.Screen name="ProfDetails" component={ProfDetails}/>
         <Stack.Screen name= "StudentLogin" component={StudentLogin}/>
         <Stack.Screen name="StudentDetails" component={StudentDetails} />
         <Stack.Screen name="LoadingScreen" component={LoadingScreen} />
@@ -41,6 +43,7 @@ const App = () => {
       <Stack.Screen name="SelectionPage" component={SelectionPage}/>
         <Stack.Screen name="ConnectedPage" component={ConnectedPage}/>
         <Stack.Screen name="ProfilePage" component={ProfilePage}/>
+        
 
         {/* Add other screens/routes here */}
       </Stack.Navigator>

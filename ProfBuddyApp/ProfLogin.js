@@ -101,7 +101,6 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     color: "#FAFAFA",
-    whiteSpace: "nowrap",
     borderRadius: 10,
     backgroundColor: "#141B61",
     alignItems: "center",

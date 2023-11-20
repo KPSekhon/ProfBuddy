@@ -8,9 +8,9 @@ const SelectionPage = () => {
   const handleCardPress = (role) => {
     // You can navigate to the respective pages based on the selected role
     if (role === 'student') {
-      navigation.navigate('StudentLogin');
+      navigation.navigate('NoticeStudent');
     } else if (role === 'professor') {
-      navigation.navigate('ProfLogin');
+      navigation.navigate('NoticeProf');
     }
   };
 
