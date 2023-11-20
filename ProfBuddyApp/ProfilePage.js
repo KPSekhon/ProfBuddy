@@ -105,7 +105,7 @@ const ProfilePage = () => {
 
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => navigation.navigate('Chats')}>
+        <TouchableOpacity onPress={() => navigation.navigate('ChatImage')}>
           <Image
             source={{ uri: 'https://media.discordapp.net/attachments/1175508031694454804/1175970116924625006/hacka2.png?ex=656d2a84&is=655ab584&hm=21fa49239d1bc35624ba07992fccf29a985092efa5044c96fe1a04b190cad40e&=&width=292&height=324' }}
             style={styles.bottomIcon}
@@ -113,7 +113,7 @@ const ProfilePage = () => {
         
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => navigation.navigate('Settings')}>
+        <TouchableOpacity onPress={() => navigation.navigate('ProfilePage')}>
           <Image
             source={{ uri: 'https://media.discordapp.net/attachments/1175508031694454804/1175970117188857966/hacka3.png?ex=656d2a84&is=655ab584&hm=af7de674db40aabac15bfab0a7f0f24f56a74c7955e8ab6fb026fff7b8fd7e6a&=&width=340&height=260' }}
             style={styles.bottomIcon}

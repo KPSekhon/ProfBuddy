@@ -3,7 +3,9 @@ import { View, Text, TouchableOpacity, Image, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 function ChatImage(props) {
+  const navigation = useNavigation();
   return (
+    
     <View style={styles.container}>
       <View style={styles.messageContainer}>
         <Image
@@ -65,7 +67,7 @@ function ChatImage(props) {
         
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => navigation.navigate('Settings')}>
+        <TouchableOpacity onPress={() => navigation.navigate('ProfilePage')}>
           <Image
             source={{ uri: 'https://media.discordapp.net/attachments/1175508031694454804/1175970117188857966/hacka3.png?ex=656d2a84&is=655ab584&hm=af7de674db40aabac15bfab0a7f0f24f56a74c7955e8ab6fb026fff7b8fd7e6a&=&width=340&height=260' }}
             style={styles.bottomIcon}

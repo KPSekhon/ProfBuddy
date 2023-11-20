@@ -7,7 +7,7 @@ const ConnectedPage = () => {
 
   const handleSendMessage = () => {
     // Navigate to the page where you can send a message
-    navigation.navigate('SendMessagePage');
+    navigation.navigate('ChatImage');
   };
 
   return (

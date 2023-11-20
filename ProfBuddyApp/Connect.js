@@ -4,7 +4,7 @@ import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 const Connect = ({ navigation }) => {
   const handleNext = () => {
     // Navigate to the next screen
-    navigation.navigate('StudentLogin');
+    navigation.navigate('ConnectedPage');
   };
 
   return (

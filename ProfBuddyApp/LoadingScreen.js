@@ -7,7 +7,7 @@ const LoadingScreen = ({ navigation }) => {
     const timeout = setTimeout(() => {
       // After 2 seconds, navigate to the next screen
       //**NEXT SCREEN should be replaced with the screen that comes after */
-      navigation.navigate('ChatImage');
+      navigation.navigate('ConnectedPage');
     }, 2000);
 
     // Clear the timeout to prevent it from triggering if the user leaves the page
