@@ -29,7 +29,7 @@ const StudentDetails = ({ navigation }) => {
       <View style={styles.imageContainer}>
         {/* Placeholder for an image - replace the source with your actual image */}
         <Image
-          source={{ uri: 'https://cdn.discordapp.com/attachments/1175508031694454804/1175928662994989086/ethan-rougon-uZBCgRDKsko-unsplash.jpg?ex=656d03e8&is=655a8ee8&hm=64a325c07dff083ae01e5e08dd4c6c81e7eef9b2dc4e6cda3986bfe408fe4db2&' }}
+          source= {require('./images/studentProfile.jpg')}
           style={styles.image}
         />
         <TouchableOpacity style={styles.editButton}>

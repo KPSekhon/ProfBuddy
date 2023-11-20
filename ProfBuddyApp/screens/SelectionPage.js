@@ -25,7 +25,7 @@ const SelectionPage = () => {
         onPress={() => handleCardPress('student')}
       >
         <Image
-          source={{ uri: 'https://media.discordapp.net/attachments/1175508031694454804/1175929819742085221/vibrent_2.png?ex=656d04fc&is=655a8ffc&hm=03d5a1697a3290bf354809c64e901d8bcbbb389287c86f458d33793a96852161&=&width=400&height=400' }}
+          source={require('./images/studentCard.png')}
           style={styles.cardImage}
         />
         <Text style={styles.cardLabel}>Student</Text>
@@ -36,7 +36,7 @@ const SelectionPage = () => {
         onPress={() => handleCardPress('professor')}
       >
         <Image
-          source={{ uri: 'https://media.discordapp.net/attachments/1175508031694454804/1175929820153131160/vibrent_18.png?ex=656d04fc&is=655a8ffc&hm=93484d0afede43983174ddb1e76858304d8133a0fe5b85a0ae772753de376483&=&width=400&height=400' }}
+          source={require('./images/profCard.png')}
           style={styles.cardImage}
         />
         <Text style={styles.cardLabel}>Professor</Text>

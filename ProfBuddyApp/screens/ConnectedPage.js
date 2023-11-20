@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, Image, StyleSheet } from 'react-native';
+import { ScrollView, View, Text, TouchableOpacity, Image, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 const ConnectedPage = () => {
@@ -11,10 +11,10 @@ const ConnectedPage = () => {
   };
 
   return (
-    <View style={styles.container}>
+    <ScrollView contentContainerStyle={styles.container}>
       {/* Circular Image at the top */}
       <Image
-        source={{ uri: 'https://media.discordapp.net/attachments/1175508031694454804/1175928712542302288/ben-den-engelsen-YUu9UAcOKZ4-unsplash.jpg?ex=656d03f4&is=655a8ef4&hm=df0a2f3e0b661cd43d7e55535c1dca20534ac1a25ace6a7bf12ccacf9ae7e0c5&=&width=1450&height=966' }}
+        source= {require('./images/profProfile.jpg')}
         style={styles.circularImage}
       />
 
@@ -33,7 +33,7 @@ const ConnectedPage = () => {
       >
         <Text style={styles.sendMessageButtonText}>Send Message</Text>
       </TouchableOpacity>
-    </View>
+    </ScrollView>
   );
 };
 

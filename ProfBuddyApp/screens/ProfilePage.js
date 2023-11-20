@@ -26,7 +26,7 @@ const ProfilePage = () => {
 
       {/* Circular Image */}
       <Image
-        source={{ uri: 'https://cdn.discordapp.com/attachments/1175508031694454804/1175928662994989086/ethan-rougon-uZBCgRDKsko-unsplash.jpg?ex=656d03e8&is=655a8ee8&hm=64a325c07dff083ae01e5e08dd4c6c81e7eef9b2dc4e6cda3986bfe408fe4db2&' }}
+        source= {require('./images/studentProfile.jpg')}
         style={styles.circularImage}
       />
 
@@ -99,15 +99,15 @@ const ProfilePage = () => {
       <View style={styles.bottomBar}>
         <TouchableOpacity onPress={() => navigation.navigate('Connect')}>
           <Image
-            source={{ uri: 'https://media.discordapp.net/attachments/1175508031694454804/1175970488221192262/hacka1.png?ex=656d2adc&is=655ab5dc&hm=614fed921863a4560c9f95a9b7622f9ad3f36692233978ecf66efb695ec6bbe4&=&width=356&height=336' }}
+            source= {require('./images/connectIcon.png')}
             style={styles.bottomIcon}
           />
 
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => navigation.navigate('ChatImage')}>
+        <TouchableOpacity onPress={() => navigation.navigate('Messages')}>
           <Image
-            source={{ uri: 'https://media.discordapp.net/attachments/1175508031694454804/1175970116924625006/hacka2.png?ex=656d2a84&is=655ab584&hm=21fa49239d1bc35624ba07992fccf29a985092efa5044c96fe1a04b190cad40e&=&width=292&height=324' }}
+            source= {require('./images/chatsIcon.png')}
             style={styles.bottomIcon}
           />
         
@@ -115,7 +115,7 @@ const ProfilePage = () => {
 
         <TouchableOpacity onPress={() => navigation.navigate('ProfilePage')}>
           <Image
-            source={{ uri: 'https://media.discordapp.net/attachments/1175508031694454804/1175970117188857966/hacka3.png?ex=656d2a84&is=655ab584&hm=af7de674db40aabac15bfab0a7f0f24f56a74c7955e8ab6fb026fff7b8fd7e6a&=&width=340&height=260' }}
+            source= {require('./images/settingsIcon.png')}
             style={styles.bottomIcon}
           />
           
@@ -194,7 +194,7 @@ const styles = StyleSheet.create({
   },
   bottomBar: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: 'space-around',
     borderTopWidth: 1,
     borderTopColor: '#EDF2F7',
     paddingTop: 20,

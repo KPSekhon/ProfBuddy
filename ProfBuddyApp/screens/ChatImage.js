@@ -1,12 +1,12 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, Image, StyleSheet } from 'react-native';
+import { ScrollView, View, Text, TouchableOpacity, Image, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 function ChatImage(props) {
   const navigation = useNavigation();
   return (
     
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <View style={styles.messageContainer}>
         <Image
           resizeMode="contain"
@@ -29,7 +29,7 @@ function ChatImage(props) {
       <View style={styles.replyContainer}>
         <Image
           resizeMode="contain"
-          source={{ uri: "https://cdn.builder.io/api/v1/image/assets/TEMP/4fe2a400-9b7d-4a9b-92a9-fd66a91d87e2" }}
+          source= {require('./images/profProfile.jpg')}
           style={styles.profileImage}
         />
         <Text style={styles.replyText}>
@@ -53,15 +53,15 @@ function ChatImage(props) {
       <View style={styles.bottomBar}>
         <TouchableOpacity onPress={() => navigation.navigate('Connect')}>
           <Image
-            source={{ uri: 'https://media.discordapp.net/attachments/1175508031694454804/1175970488221192262/hacka1.png?ex=656d2adc&is=655ab5dc&hm=614fed921863a4560c9f95a9b7622f9ad3f36692233978ecf66efb695ec6bbe4&=&width=356&height=336' }}
+            source={require('./images/connectIcon.png')}
             style={styles.bottomIcon}
           />
 
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => navigation.navigate('Chats')}>
+        <TouchableOpacity onPress={() => navigation.navigate('Messages')}>
           <Image
-            source={{ uri: 'https://media.discordapp.net/attachments/1175508031694454804/1175970116924625006/hacka2.png?ex=656d2a84&is=655ab584&hm=21fa49239d1bc35624ba07992fccf29a985092efa5044c96fe1a04b190cad40e&=&width=292&height=324' }}
+            source={require('./images/chatsIcon.png')}
             style={styles.bottomIcon}
           />
         
@@ -69,13 +69,13 @@ function ChatImage(props) {
 
         <TouchableOpacity onPress={() => navigation.navigate('ProfilePage')}>
           <Image
-            source={{ uri: 'https://media.discordapp.net/attachments/1175508031694454804/1175970117188857966/hacka3.png?ex=656d2a84&is=655ab584&hm=af7de674db40aabac15bfab0a7f0f24f56a74c7955e8ab6fb026fff7b8fd7e6a&=&width=340&height=260' }}
+            source={require('./images/settingsIcon.png')}
             style={styles.bottomIcon}
           />
           
         </TouchableOpacity>
       </View>
-    </View>
+    </ScrollView>
   );
 }
 

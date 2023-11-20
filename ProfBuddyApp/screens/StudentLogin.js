@@ -1,10 +1,8 @@
-
-
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
 import { Avatar, Card } from 'react-native-paper';
 
-const ProfLogin = ({ navigation }) => {
+const StudentLogin = ({ navigation }) => {
   const [cwl, setCwl] = useState('');
   const [password, setPassword] = useState('');
 
@@ -15,17 +13,17 @@ const ProfLogin = ({ navigation }) => {
     console.log('Password:', password);
 
     // Navigate to the next screen
-    navigation.navigate('ProfDetails'); // Replace 'NextScreen' with the actual name of the next screen
+    navigation.navigate('StudentDetails'); // Replace 'NextScreen' with the actual name of the next screen
   };
 
   return (
     <View style={styles.container}>
       <Card style={styles.card}>
         <Card.Content>
-          <Text style={styles.Title}>Professor</Text>
+          <Text style={styles.Title}>Student</Text>
           <Avatar.Image
             size={150}
-            source={{ uri: 'https://media.discordapp.net/attachments/1175508031694454804/1175928532711506042/vecteezy_male-teacher-with-book_11378264.jpg?ex=656d03c9&is=655a8ec9&hm=c17c8dc21af34dddad37dfcdcfc3334ba64a0a88255f167e3e5145a499f381b7&=&width=966&height=966' }}
+            source={require('./images/generalStudent.jpg')}
             style={styles.avatar}
           />
 
@@ -111,4 +109,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ProfLogin;
+export default StudentLogin;
