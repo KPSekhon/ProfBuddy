@@ -1,5 +1,6 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet } from 'react-native';
+import { View, Text, TouchableOpacity, Image, StyleSheet } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 function ChatImage(props) {
   return (
@@ -45,6 +46,32 @@ function ChatImage(props) {
 
       <View style={styles.footer}>
         <Text style={styles.footerText}>Reply</Text>
+      </View>
+      {/* Bottom Bar Navigation */}
+      <View style={styles.bottomBar}>
+        <TouchableOpacity onPress={() => navigation.navigate('Connect')}>
+          <Image
+            source={{ uri: 'https://media.discordapp.net/attachments/1175508031694454804/1175970488221192262/hacka1.png?ex=656d2adc&is=655ab5dc&hm=614fed921863a4560c9f95a9b7622f9ad3f36692233978ecf66efb695ec6bbe4&=&width=356&height=336' }}
+            style={styles.bottomIcon}
+          />
+
+        </TouchableOpacity>
+
+        <TouchableOpacity onPress={() => navigation.navigate('Chats')}>
+          <Image
+            source={{ uri: 'https://media.discordapp.net/attachments/1175508031694454804/1175970116924625006/hacka2.png?ex=656d2a84&is=655ab584&hm=21fa49239d1bc35624ba07992fccf29a985092efa5044c96fe1a04b190cad40e&=&width=292&height=324' }}
+            style={styles.bottomIcon}
+          />
+        
+        </TouchableOpacity>
+
+        <TouchableOpacity onPress={() => navigation.navigate('Settings')}>
+          <Image
+            source={{ uri: 'https://media.discordapp.net/attachments/1175508031694454804/1175970117188857966/hacka3.png?ex=656d2a84&is=655ab584&hm=af7de674db40aabac15bfab0a7f0f24f56a74c7955e8ab6fb026fff7b8fd7e6a&=&width=340&height=260' }}
+            style={styles.bottomIcon}
+          />
+          
+        </TouchableOpacity>
       </View>
     </View>
   );
@@ -93,6 +120,36 @@ const styles = StyleSheet.create({
   footerText: {
     fontSize: 14,
     lineHeight: 20,
+  },
+  saveChangesButton: {
+    backgroundColor: '#141B61',
+    paddingVertical: 14,
+    paddingHorizontal: 20,
+    borderRadius: 8,
+    alignSelf: 'stretch',
+    marginBottom: 20,
+  },
+  saveChangesButtonText: {
+    color: 'white',
+    fontWeight: 'bold',
+    fontSize: 16,
+    textAlign: 'center',
+  },
+  bottomBar: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    borderTopWidth: 1,
+    borderTopColor: '#EDF2F7',
+    paddingTop: 20,
+  },
+  bottomIcon: {
+    width: 50,
+    height: 50,
+    marginBottom: 5,
+    marginLeft: 30,
+  },
+  bottomText: {
+    textAlign: 'center',
   },
 });
 
